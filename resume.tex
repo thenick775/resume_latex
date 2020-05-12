@@ -1,0 +1,82 @@
+\documentclass{res}
+
+\usepackage{pifont}
+\newsectionwidth{0pt}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{24pt}
+\setlength{\headsep}{24pt}
+\pagestyle{fancy}
+\cfoot{}
+\topmargin=-0.3in
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+	\thispagestyle{empty} % no header
+	\centerline{\bf \Large{Nicholas VanCise}}
+	\centerline{(702) 601-4856}
+	\centerline{vancise@unlv.nevada.edu}
+  \centerline{nicholas-vancise.glitch.me (Website/Github)}
+
+	\begin{resume}
+
+		\section{{PROFESSIONAL EXPERIENCE}}
+    \noindent\rule[0.5ex]{\linewidth}{1pt}
+		{\bf Terbine - The Global Exchange for IoT Data} \hfill \emph{November 2018 - Present} \\
+			\emph{Data Linker}
+
+			\begin{itemize} \itemsep -2pt
+				\item Develops and links real time data feeds into the continuous ingestion system
+				\item Develops and maintains backend infrastruture for scalable distributed data ingestion and processing
+				\item Enables handling of exotic file types, file manipulation, and large static data files
+			\end{itemize}
+
+			\emph{Data Searcher}
+
+			\begin{itemize} \itemsep -2pt
+				\item Responsible for exploration of new IoT data sources and feeds to be ingested into the system
+				\item Ensures individual feeds adhere to the Metadata Specifications, and that all ancillary information is reviewed
+			\end{itemize}
+
+		{\bf Academic Success Center, UNLV} \hfill \emph{Summers of 2017, 2018, 2019} \\
+			\emph{Team Lead}
+
+			\begin{itemize} \itemsep -2pt
+				\item Managed planning and presentation of lectures, bookkeeping, and dynamic of the ALEKS program
+				\item Developed individual lesson plans based on statistical assessment of student performance
+        \item Prepared and proctored ALEKS placement exam
+			\end{itemize}
+
+
+		\section{{INDUSTRY PROJECTS}}
+    \noindent\rule[0.5ex]{\linewidth}{1pt}
+		{\bf Ingestion API} \hfill \vspace{3pt} \\
+			The Ingestion API is designed to function as the middle man between independant programs orchestrated by Apache Airflow that collect data, and multiple postgres database connections. This API was built with golang.
+
+		{\bf Ingestion Index Crawler} \hfill \vspace{3pt}\\
+			This crawler is designed to reduce search times of already ingested data. It crawls all instances for a specified user, and produces a list that can be easily and quickly searched. Built using Docker and Selenium in python.
+
+		\section{{PUBLIC PROJECTS}}
+    \noindent\rule[0.5ex]{\linewidth}{1pt}
+		{\bf Metroidvania} \\
+			\emph{github.com/thenick775/metroidvaniafangame} \hfill \vspace{3pt}\\
+			This project is a small game written in Objective-C that utilizes features from Spritekit, GameplayKit, AVAudioPlayer, and JSTileMap. I have written all of the event driven animation scheme, collission detection, character physics, data storage schemes, and game logic.
+
+		{\bf Terbine Map Visualization} \\
+			\emph{github.com/thenick775/Terbine-Map} \hfill \vspace{3pt} \\
+			This was a fun exercise in data visualization, where fixed coordinate data points in Terbine were plotted and connected on an interactive world map. The data mining was done using Selenium in python, and data visualization was accomplished using Mapbox in R.
+
+
+		\section{{EDUCATION}}
+    \noindent\rule[0.5ex]{\linewidth}{1pt}
+		{\sl Bachelor of Science}, Computer Science \hfill \emph{Class of Dec 2020} \\
+		University of Nevada Las Vegas
+
+
+		\section{{RELEVANT SKILLS}}
+    \noindent\rule[0.5ex]{\linewidth}{1pt}
+			{\bf Languages:} Golang, Python, Bash, Objective-C, C, Matlab, R \\
+			{\bf Related Technologies:} Docker, Amazon Web Services (AWS), Apache Airflow, Selenium, Git
+
+	\end{resume}
+\end{document}
