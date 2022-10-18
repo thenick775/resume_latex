@@ -3,6 +3,7 @@
 \usepackage{pifont}
 \newsectionwidth{0pt}
 \usepackage{fancyhdr}
+\usepackage{verbatim}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{24pt}
 \setlength{\headsep}{24pt}
@@ -10,7 +11,6 @@
 \cfoot{}
 \topmargin=-0.3in
 \usepackage[margin=0.4in,left=0.5in,right=0.5in]{geometry}
-%%\usepackage[bottom=0.2in,top=0.5in,left=0.5in,right=0.5in]{geometry}
 
 \begin{document}
 	\thispagestyle{empty} % no header
@@ -18,14 +18,23 @@
 	\centerline{(702) 601-4856}
 	\centerline{vancise@unlv.nevada.edu}
   \centerline{https://nicholas-vancise.dev}
-  \centerline{github.com/thenick775}
+  \centerline{https://github.com/thenick775}
   \vspace{-18pt}
 
 	\begin{resume}
 
 		\section{{PROFESSIONAL EXPERIENCE}}
     \noindent\rule[0.5ex]{\linewidth}{1pt}
-    		{\bf Systems \& Software} \hfill \emph{July 2021 - Present} \\
+    		{\bf Nav Technologies, Inc.} \hfill \emph{August 2022 - Present} \\
+			\emph{Senior Software Engineer}
+
+			\begin{itemize} \itemsep -2pt
+				\item Develops and maintains business critical services in a distributed microservice architecture
+				\item Responsible for lending and credit services including feature development, testing, deployments, and service health
+				\item Responsible for full stack development with an emphasis on back-end services in both Golang and Elixir
+			\end{itemize} \vspace{-2mm}
+    		
+    		{\bf Systems \& Software} \hfill \emph{July 2021 - August 2022} \\
 			\emph{Full Stack Software Engineer/Support Analyst}
 
 			\begin{itemize} \itemsep -2pt
@@ -63,6 +72,7 @@
 				\item Ensures individual feeds adhere to the Metadata Specifications, and that all ancillary information is reviewed
 			\end{itemize} \vspace{-2mm}
 
+        \begin{comment}
 		{\bf Academic Success Center, UNLV} \hfill \emph{Summers of 2017, 2018, 2019} \\
 			\emph{Team Lead}
 
@@ -71,26 +81,34 @@
 				\item Developed individual lesson plans based on statistical assessment of student performance
         \item Prepared and proctored ALEKS placement exam
 			\end{itemize}
+		\end{comment}
 
 \vspace{-3pt}
 
 		\section{{INDUSTRY PROJECTS}}
-    \noindent\rule[0.5ex]{\linewidth}{1pt}
+    \noindent\rule[0.5ex]{\linewidth}{1pt}        
+		{\bf enQuesta Application} \hfill \vspace{5pt} \\
+           The enQuesta application is a cloud-based CIS solution for utilities covering customer billing, device management, customer engagement, and much more. My expertise centered around Cobol and Java development of central billing services, as well as bill print and front-end web page design and support. I also targeted improvement of infrastructure level code in C and Perl during my time at Systems \& Software to further enhance compile times and run-time reliability.
+
+\vspace{-5pt}
+    
 		{\bf Ingestion API} \hfill \vspace{5pt} \\
-			The Ingestion API is designed to function as the middle man between independent programs orchestrated by Apache Airflow that collect data, and multiple postgres database connections. This API was built with Golang.
+			The Terbine Ingestion API is designed to function as the middle man between independent programs orchestrated by Apache Airflow that collect data, and multiple PostgreSQL database connections. This API was built with Golang.
 \vspace{-5pt}
 
 		{\bf Airflow Ingestion Cluster} \hfill \vspace{5pt} \\
-			The Airflow Ingestion Cluster is designed to fetch and process data from a multitude of public data sources using docker based web scrapers, where this data is sent to the Ingestion API for storage. This cluster was built with Apache Airflow and Docker, where the web scrapers were built using Python, Golang, and Bash.
+			The Airflow Ingestion Cluster is designed to fetch and process data from a multitude of public data sources using Docker based web scrapers, where this data is sent to the Terbine Ingestion API for storage. This cluster was built with Apache Airflow and Docker, where the web scrapers were built using Python, Golang, and Bash.
 \vspace{-5pt}
 
+\begin{comment}
 		{\bf Ingestion Index Crawler} \hfill \vspace{5pt}\\
-			This crawler is designed to reduce search times of already ingested data. It crawls all instances for a specified user, and produces a list that can be easily and quickly searched. This software was built using Docker and Selenium in Python.
+			This crawler is designed to reduce search times of already ingested Terbine searcher data. It crawls all instances for a specified user, and produces a list that can be easily and quickly searched. This software was built using Docker and Selenium in Python.
 \vspace{-5pt}
+\end{comment}
 
 		{\bf IoT Data Visualizations} \\
     \emph{github.com/thenick775/terbine\_visualizations} \hfill \vspace{4pt}\\
-			These projects are an interactive way to view and analyze data from a multitude of physical sensors located around the world. The indivudual visualizations were constructed using Javascript, Jupyter-Notebooks, D3, Kepler.gl, and Leaflet, where they are currently featured on the main Terbine website.
+			These projects are an interactive way to view and analyze data from a multitude of physical sensors located around the world using data sourced from within Terbine. The individual visualizations were constructed using JavaScript, Jupyter-Notebooks, D3, Kepler.gl, and Leaflet. These visualizations were previously featured on the main Terbine website.
 
 \vspace{-3pt}
 
@@ -106,27 +124,35 @@
 			This project is a small game written in Objective-C that utilizes features from Spritekit, GameplayKit, AVAudioPlayer, and JSTileMap. I have written all of the event driven animation scheme, collision detection, character physics, data storage schemes, and game logic.
 \vspace{-4pt}
 
+		{\bf Browser Based Gameboy Advance} \\
+			\emph{github.com/thenick775/gbajs3} \hfill \vspace{3pt} \\
+			This was a fun exercise in browser agnostic GBA emulation. My goal was to make a Gameboy Advance emulator available on iOS, circumventing some of the problems of emulation on this platform. This was built on top of gbajs, offering several feature upgrades such as PWA support, as well as a modern UI. Currently this project is entirely built in JavaScript, HTML, and utilizes a back-end service built in Golang.
+
+\vspace{-4pt}
+
 		{\bf TheList Utility} \\
 			\emph{github.com/thenick775/thelist} \hfill \vspace{3pt} \\
-			This cross platform project is an app used to make fast, search-able, in memory sets of lists. I built this as I had a need for searching lists by regular expression, and found no utility already serving this purpose. Fyne was used for the application display and packaging, where this project is featured in the Fyne Application Showcase.
-			
+			This cross platform project is an app used to make fast, searchable, in memory sets of lists. I built this as I had a need for searching lists by regular expression, and found no utility already serving this purpose. Fyne was used for the application display and packaging, where this project is featured in the Fyne Application Showcase.
+
+\begin{comment}
 \vspace{-4pt}
 
 		{\bf Terbine Map Visualization} \\
 			\emph{github.com/thenick775/Terbine-Map} \hfill \vspace{3pt} \\
 			This was a fun exercise in data visualization, where fixed coordinate data points in Terbine were plotted and connected on an interactive world map. The data mining was done using Selenium in Python, and data visualization was accomplished using Mapbox in R.
+\end{comment}
 
 \vspace{-4pt}
 
 		\section{{EDUCATION}}
     \noindent\rule[0.5ex]{\linewidth}{1pt}
 		{\sl Bachelor of Science}, Computer Science \hfill \emph{Class of Dec 2020} \\
-		University of Nevada Las Vegas \hfill \emph{GPA: 3.79} \\ \vspace{-5mm}
+		University of Nevada Las Vegas \hfill \emph{GPA: 3.79} \\ Honors: \hfill \emph{Cum Laude} \\ \vspace{-5mm}
 
 		\section{{RELEVANT SKILLS}}
     \noindent\rule[0.5ex]{\linewidth}{1pt}
-			{\bf Languages:} Golang, Python, Bash, Objective-C, C, Java, Javascript, Cobol, Matlab, R \\
-			{\bf Related Technologies:} Docker, Amazon Web Services (AWS), Apache Airflow, Django, Nginx, Selenium, D3, Git,\ \\ PostgreSQL, MySQL, MariaDB
+			{\bf Languages:} Golang, Elixir, Python, Bash, Objective-C, C, Java, JavaScript, Cobol, Matlab, R \\
+			{\bf Related Technologies:} Docker, Kubernetes, Amazon Web Services (AWS), Apache Airflow, Django, Nginx,\ \\ Selenium, D3, Git, PostgreSQL, MySQL, MariaDB
 
 	\end{resume}
 \end{document}
